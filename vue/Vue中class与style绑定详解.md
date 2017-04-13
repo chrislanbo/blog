@@ -67,7 +67,7 @@ computed:{
 }
 
 ```
-
+<!-- more -->
 ###数组
 * 传给v-bind:class一个数组，以应用class列表
 
