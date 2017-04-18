@@ -31,3 +31,7 @@ npm config set registry https://registry.npm.taobao.org --global npm config set 
 ### 安装vue 
 `npm install -g vue-cli`
 
+# 安装
+有的项目需要安装sass，但是这个安装总是有问题
+npm install --save node-sass --registry=https://registry.npm.taobao.org --disturl=https://npm.taobao.org/dist --sass-binary-site=http://npm.taobao.org/mirrors/node-sass
+

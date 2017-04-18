@@ -6,7 +6,7 @@ tags: [vue,绑定]
 
 vue中用v-bind处理元素的class列表和它内联样式(Style)之间的数据绑定。因为两者都是属性，所以可以表达式计算出最终字符串，或者手动拼接。针对class和style，表达式结果可以是"",[],{}。
 
->ps： `v-bind:`可以缩写成`:`
+>ps： `v-bind:` 可以缩写成 `:`
 
 ##绑定HTML Class
 ###对象
@@ -17,17 +17,21 @@ vue中用v-bind处理元素的class列表和它内联样式(Style)之间的数�
 上面的语法表示 class<active> 的更新将取决于数据属性 isActive 是否为真值 。
 
 * 对象中传入更多属性用来动态切换多个 class，v-bind:class 指令可以与 class 属性共存
+
 ```html
 <div class="static"
      :class="{ active: isActive, 'text-danger': hasError }">
 </div>
 ```
 当data如下：
+
 ```
-data: {
-  isActive: true,
-  hasError: false
-}
+data() {
+    return {
+      isActive: true,
+      hasError: false
+      }
+};
 ```
 原来标签就渲染成：
 ```
@@ -39,26 +43,33 @@ data: {
 <div class="static active text-danger"></div>
 ```
 
-等效直接绑定对象<classObject>,对象里面有对象属性
+[已测试，不好用]等效直接绑定对象<classObject>,对象里面有对象属性
 ```html
 <div v-bind:class="classObject"></div>
 ...
 
-data: {
+data() {
+return {
   classObject: {
     active: true,
     'text-danger': false
   }
+  };
 }
 ```
-或者绑定返回对象的计算属性
+>上方法仅仅限于定值，因为data中的数据
+
+[已测试，不好用]若值不断改变，绑定返回对象的计算属性
+
 ```
-data:{
+data() {
+    return {
     isActive: true,
     error: null
+    };
 },
 computed:{
-    classObject(){
+    classObject() {
         return {
         active: this.isActive && !this.error,
         'text-danger': this.error && this.error.type === 'fatal',
@@ -73,9 +84,11 @@ computed:{
 
 ```html
 <div v-bind:class="[activeClass, errorClass]">
-data: {
+data() {
+return {
   activeClass: 'active',
   errorClass: 'text-danger'
+  };
 }
 ```
 渲染成==>
@@ -117,17 +130,21 @@ v-bind:style 的对象语法与css类似，本质为JavaScript对象。
 ```html
 <div v-bind:style="{ color: activeColor, fontSize: fontSize + 'px' }"></div>
 data: {
+return {
   activeColor: 'red',
   fontSize: 30
+  };
 }
 ```
 直接绑定样式更清晰
 ```html
 <div v-bind:style="styleObject"></div>
 data: {
+return {
   styleObject: {
     color: 'red',
     fontSize: '13px'
+  }
   }
 }
 //同样的，对象语法常常结合返回对象的计算属性使用
