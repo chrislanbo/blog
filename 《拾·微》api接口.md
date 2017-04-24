@@ -5,7 +5,7 @@ tags: [api,拾·微]
 ---
 
 # api 接口---《拾·微》
-
+getwi
 1.  分类数据: http://gank.io/api/data/数据类型/请求个数/第几页
      * 数据类型： 福利 | Android | iOS | 休息视频 | 拓展资源 | 前端 | all
      * 请求个数： 数字，大于0
@@ -29,7 +29,7 @@ tags: [api,拾·微]
 
 # api 接口---《微·笑》
     
-    
+  wifun  
 >key = 7bb45624a1ac6a2cd42719716d8f77f6
 
 1. 按照时间查询笑话: 
@@ -48,11 +48,15 @@ tags: [api,拾·微]
     *  	page	int	否	当前页数,默认1
     *  	pagesize	int	否	每次返回条数,默认1,最大20
     *  	key	string	是	您申请的key
-5. 随机获取图/文: 
+5. 随机笑话: 
     * http://v.juhe.cn/joke/randJoke.php?key=7bb45624a1ac6a2cd42719716d8f77f6&type=pic
     *  	key	string	是	你申请的key
     *   type	string	否	类型(pic:趣图,不传默认为笑话)
- 
+
+6. 随机趣图
+    * http://v.juhe.cn/joke/randJoke.php?key=7bb45624a1ac6a2cd42719716d8f77f6
+    *  	key	string	是	你申请的key
+    *   type	string	否	类型(pic:趣图,不传默认为笑话)
  ---
  返回数据含义
  ```
@@ -69,7 +73,7 @@ url	      string	趣图地址(只有是趣图的时候才返回此字段)
 
 
 # api 接口---《微·知》
-
+wiknow
 > key =  12150ee73eef17e0eb4eed6d30d9498d
 
 
@@ -79,5 +83,15 @@ url	      string	趣图地址(只有是趣图的时候才返回此字段)
     *   key	string	是	应用APPKEY
     *  	dtype	string	否	返回数据的格式,xml或json，默认json
     
+
+
+# 糗事
+
+http://m2.qiushibaike.com/article/list/suggest?page=1&type=refresh&count=30
+
+
+
+
+
 
 
