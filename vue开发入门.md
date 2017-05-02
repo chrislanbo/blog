@@ -17,11 +17,20 @@ tags: [js]
  `npm config set registry http://registry.npm.taobao.org/`
 发布自己的包的时候却需要将源修改回官方的
 `npm config set registry https://registry.npmjs.org/`
-3. `npm install -g vue-cli` 实在不行试试`cnpm install -g vue-cli`  
+3. `npm install -g vue-cli`  
 
 下载的一些东西会在这里纠缠` C:\Users\Administrator\AppData\Roaming\npm\node_modules\vue-cli\`
 
 4. 进入自己制定的目录执行`vue init webpack vueDemo`创建第一个vue项目，然后要依次确认几个问题
+
+        project name (***) //直接回车
+        project description // 项目详情，不写就直接回车
+        Author //回车
+        install vue-router yes //安装路由
+        use an eslint preset standard //js代码标准检查
+        剩下两个都no
+    
+    
 5. cd 到 vueDemo 执行`npm install` 下载项目需要的依赖包到`node_modules`,之前用`cnpm install`下载总是不全（其实是在windows上默认有很多前缀，导致无法识别）
 6. `npm run dev`运行项目，对应package.json中的js文件
 7. 在浏览器中输入`localhost:8080`,查看网页
@@ -51,7 +60,7 @@ npm -g install npm@3.10.8
         vendor/                         ---> ThirdParty lib
         views/                          ---> 展示视图库
         main.js                         ---> 入口文件
-    .babelrc                            ---> babel 配置文件
+    .babelrc                            ---> babel 配置文件es6 ->es5
     .eslintrc                           ---> eslint 配置文件
     .gitignore                          ---> gitignore
     index.html                          ---> index
@@ -124,3 +133,16 @@ npm install --save node-sass --registry=https://registry.npm.taobao.org  --sass
 --disturl=https://npm.taobao.org/dist
 
 ```
+
+
+vue-resource 和后端做ajax通信
+webpack 构建工具，将代码编译成浏览器可识别的语句
+
+vue 特点 数据驱动dom改变
+
+vue-cli vue基础代码
+
+
+
+
+
