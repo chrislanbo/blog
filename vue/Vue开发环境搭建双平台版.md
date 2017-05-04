@@ -1,7 +1,7 @@
 ---
 title: Vue开发环境搭建双平台版
 date: 2017-04-11 15:56:08
-tags: [Vue,环境搭建]
+tags: [Vue,环境搭建,sass]
 ---
 
 ### Homebrew, Mac系统的包管理器
@@ -32,6 +32,7 @@ npm config set registry https://registry.npm.taobao.org --global npm config set 
 `npm install -g vue-cli`
 
 # 安装
-有的项目需要安装sass，但是这个安装总是有问题
-npm install --save node-sass --registry=https://registry.npm.taobao.org --disturl=https://npm.taobao.org/dist --sass-binary-site=http://npm.taobao.org/mirrors/node-sass
+有的项目需要安装sass，但是这个安装总是有问题,提示不能运行c还有什么版本过低，只要输入如下
+
+	npm install --save node-sass --registry=https://registry.npm.taobao.org --disturl=https://npm.taobao.org/dist --sass-binary-site=http://npm.taobao.org/mirrors/node-sass
 
