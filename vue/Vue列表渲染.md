@@ -2,6 +2,7 @@
 title: Vue列表渲染
 date: 2017-04-12 16:02:02
 tags: [vue,v-for]
+categories: [vue]
 ---
 
 # 数组迭代v-for
