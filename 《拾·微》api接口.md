@@ -66,6 +66,7 @@ result	  string	返回内容
 content	  string	笑话内容或题目
 hashId	  string	笑话或趣图的唯一标识
 unixtime	long	笑话或趣图更新的时间戳
+updatetime	string	更新时间
 url	      string	趣图地址(只有是趣图的时候才返回此字段)
 ```
 
