@@ -294,3 +294,18 @@ git branch --set-upstream master origin/master
 
 git branch --set-upstream develop origin/develop
 
+git相关使用命令
+根目录创建.gitignore文件
+示例：
+.gitignore文件中键入
+bin/
+gen/
+等
+
+
+git status 代码变动
+git diff 查看不同
+git checkout src/com/.../xxx.java 撤销未提交(commit)的代码
+git reset HEAD src/com/.../xxx.java 取消已经提交的代码(commit)的代码
+git log 查看提交的log
+git log 2e7c076... -1 -p 查看本次提交修改的内容
