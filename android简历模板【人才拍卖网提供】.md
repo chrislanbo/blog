@@ -1,7 +1,7 @@
 ---
 title: android简历模板【人才拍卖网提供】
 date: 2017-04-24 17:47:29
-tags: [简历模板,android]
+tags: [简历模板,android,面试]
 categories:
 ---
 
